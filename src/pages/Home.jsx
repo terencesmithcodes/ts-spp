@@ -49,16 +49,15 @@ function Home() {
       </div>
       <section>
         <div className="about">
-          <h1>
-            Nice to meet you! <br />
-            I'm Terence Smith.
-          </h1>
+          <h1>Nice to meet you! I'm Terence Smith.</h1>
           <p>
             Based in Atlanta, GA, I'm a full-stack developer <br />
             passionate about building accessible web apps <br />
             that users love.
           </p>
-          <button>Contact Me</button>
+          <Link to="contact" smooth={true} duration={500}>
+            Contact Me
+          </Link>
         </div>
         <div className="picture">
           <img className="headshot" src={terence} alt="#" />
@@ -67,28 +66,28 @@ function Home() {
 
       <div className="skills">
         {/* <h1>Skills</h1> */}
-        <div>
+        <div className="skill">
           <h3>HTML</h3>
           <p>4 Years Experience</p>
         </div>
-        <div>
+        <div className="skill">
           <h3>CSS</h3>
           <p>4 Years Experience</p>
         </div>
-        <div>
+        <div className="skill">
           <h3>Javascript</h3>
           <p>4 Years Experience</p>
         </div>
-        <div>
+        <div className="skill">
           <h3>React.js</h3>
           <p>4 Years Experience</p>
         </div>
-        <div>
+        <div className="skill">
           <h3>Node.js</h3>
           <p>4 Years Experience</p>
         </div>
-        <div>
-          <h3>Express</h3>
+        <div className="skill">
+          <h3>Express.js</h3>
           <p>4 Years Experience</p>
         </div>
       </div>

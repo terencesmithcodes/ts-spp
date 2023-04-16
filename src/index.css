@@ -36,7 +36,7 @@ img {
 
 ul.menu-list a {
   font-family: 'Space Grotesk';
-  font-size: 15px;
+  font-size: 18px;
   color: white;
 }
 
@@ -53,7 +53,7 @@ section {
 .about > h1 {
   font-family: 'Space Grotesk';
   font-size: 88px;
-  word-spacing: -2.5px;
+  line-height: -2.5px;
   font-weight: bold;
   color: white;
 }
@@ -62,10 +62,43 @@ section {
   font-size: 18px;
   font-weight: medium;
   color: #d9d9d9;
+  margin-bottom: 35px;
 }
 .headshot {
   display: grid;
   height: 720px;
   width: 645px;
   place-item: center;
+}
+
+.about > a {
+  font-family: 'Space Grotesk';
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  margin: 25px 25px 25px 25px;
+  grid-gap: 1rem;
+  place-items: center;
+}
+
+.skill.skill > h3 {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: 'Space Grotesk';
+  text-transform: uppercase;
+  color: white;
+}
+
+.skill.skill > p {
+  font-size: 18px;
+  font-weight: medium;
+  font-family: 'Space Grotesk';
+  color: #d9d9d9;
+  margin-top: 10px;
 }
