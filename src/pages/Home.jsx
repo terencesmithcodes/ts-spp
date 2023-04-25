@@ -1,12 +1,20 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import '../index.css'
 import terence from '../assets/terence.jpg'
+import img1 from '../assets/img1.jpg'
+import heroCircle from '../assets/hero-circle.png'
+import oval from '../assets/Oval.png'
+import divider from '../assets/Rectangle.png'
 
 function Home() {
   return (
     <>
+      <div className="oval">
+        <img src={oval} alt="#" />
+      </div>
       <div className="header">
         <div className="terence">terencesmith</div>
         <nav className="menu">
@@ -32,7 +40,7 @@ function Home() {
                 smooth={true}
                 duration={500}
               >
-                Github
+                <FaGithub className="git" />
               </Link>
             </li>
             <li>
@@ -41,60 +49,76 @@ function Home() {
                 smooth={true}
                 duration={500}
               >
-                LinkedIn
+                <FaLinkedin className="linkedin" />
               </Link>
             </li>
           </ul>
         </nav>
       </div>
       <section>
-        <div className="about">
-          <h1>Nice to meet you! I'm Terence Smith.</h1>
+        <div
+          className="about"
+          style={{
+            backgroundImage: `url(${heroCircle})`,
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          {/* <img src={heroCircle} alt="#" className="heroCircles" /> */}
+          <h1>Nice to meet you!</h1>
+          <h1>
+            I'm <span>Terence Smith.</span>
+          </h1>
           <p>
             Based in Atlanta, GA, I'm a full-stack developer <br />
             passionate about building accessible web apps <br />
             that users love.
           </p>
-          <Link to="contact" smooth={true} duration={500}>
+          <Link to="contact" smooth={true} duration={500} className="contact">
             Contact Me
           </Link>
         </div>
+
         <div className="picture">
-          <img className="headshot" src={terence} alt="#" />
+          <img src={terence} alt="#" />
         </div>
       </section>
-
+      <div className="divider">
+        <img src={divider} alt="#" />
+      </div>
       <div className="skills">
         {/* <h1>Skills</h1> */}
         <div className="skill">
           <h3>HTML</h3>
           <p>4 Years Experience</p>
         </div>
-        <div className="skill">
+        <div className="skill center">
           <h3>CSS</h3>
           <p>4 Years Experience</p>
         </div>
-        <div className="skill">
+        <div className="skill end">
           <h3>Javascript</h3>
-          <p>4 Years Experience</p>
+          <p>2 Years Experience</p>
         </div>
         <div className="skill">
           <h3>React.js</h3>
-          <p>4 Years Experience</p>
+          <p>2 Years Experience</p>
         </div>
-        <div className="skill">
+        <div className="skill center">
           <h3>Node.js</h3>
-          <p>4 Years Experience</p>
+          <p>2 Years Experience</p>
         </div>
-        <div className="skill">
+        <div className="skill end">
           <h3>Express.js</h3>
-          <p>4 Years Experience</p>
+          <p>2 Years Experience</p>
         </div>
       </div>
-      <div className="project-title">Projects</div>
+      <div className="project-title">
+        Projects
+        <div className="project-contact">Contact Me</div>
+      </div>
       <div className="projects">
         <div>
-          <img src="" alt="" />
+          <img className="headshot" src={img1} alt="#" />
           <h3>Digital Building</h3>
           <ul>
             <li>HTML</li>
@@ -103,7 +127,7 @@ function Home() {
         </div>
 
         <div>
-          <img src="" alt="" />
+          <img className="headshot" src={img1} alt="#" />
           <h3>Digital Building</h3>
           <ul>
             <li>HTML</li>
@@ -111,7 +135,7 @@ function Home() {
           </ul>
         </div>
         <div>
-          <img src="" alt="" />
+          <img className="headshot" src={img1} alt="#" />
           <h3>Digital Building</h3>
           <ul>
             <li>HTML</li>
@@ -119,7 +143,7 @@ function Home() {
           </ul>
         </div>
         <div>
-          <img src="" alt="" />
+          <img className="headshot" src={img1} alt="#" />
           <h3>Digital Building</h3>
           <ul>
             <li>HTML</li>
@@ -133,10 +157,14 @@ function Home() {
         {/* <Contact /> */}
       </div>
       <footer>
-        <h3>Terence Smith</h3>
-        <ul>
-          <li>Github</li>
-          <li>Linkedin</li>
+        <h3 className="footer-terence">Terence Smith</h3>
+        <ul className="footer-list">
+          <li>
+            <FaGithub className="git" />
+          </li>
+          <li>
+            <FaLinkedin className="linkedin" />
+          </li>
         </ul>
       </footer>
     </>
