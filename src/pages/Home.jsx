@@ -8,13 +8,14 @@ import img1 from '../assets/img1.jpg'
 import heroCircle from '../assets/hero-circle.png'
 import oval from '../assets/Oval.png'
 import divider from '../assets/Rectangle.png'
+import contactCircle from '../assets/contact-circle.png'
 
 function Home() {
   return (
     <>
-      <div className="oval">
+      {/* <div className="oval">
         <img src={oval} alt="#" />
-      </div>
+      </div> */}
       <div className="header">
         <div className="terence">terencesmith</div>
         <nav className="menu">
@@ -130,8 +131,9 @@ function Home() {
           <img className="headshot" src={img1} alt="#" />
           <h3>Digital Building</h3>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>React</li>
+            <li>Node</li>
+            {/* <li>Tailwind CSS</li> */}
           </ul>
         </div>
         <div>
@@ -152,18 +154,84 @@ function Home() {
         </div>
       </div>
 
-      <div className="contact">
-        <h4>Contact</h4>
-        {/* <Contact /> */}
+      <div
+        className="contact-form"
+        // style={{
+        //   backgroundImage: `url(${heroCircle})`,
+        //   backgroundRepeat: 'no-repeat',
+        // }}
+      >
+        <div className="contact-info">
+          <h1>Contact</h1>
+          <p>
+            I would love to hear about your project and how <br /> I could help.
+            Please fill in the form, and I'll get <br />
+            back to you as soon as possible.
+          </p>
+        </div>
+
+        <form>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="name"
+              // value={name}
+              placeholder="Enter your name"
+              // onChange={onChange}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              id="email"
+              name="email"
+              // value={name}
+              placeholder="Enter your name"
+              // onChange={onChange}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              id="message"
+              name="message"
+              // value={name}
+              placeholder="Enter your name"
+              // onChange={onChange}
+            />
+          </div>
+        </form>
+        <div className="circle">
+          <img className="contact-circle" src={contactCircle} alt="#" />
+        </div>
+      </div>
+      <div className="divider">
+        <img src={divider} alt="#" />
       </div>
       <footer>
-        <h3 className="footer-terence">Terence Smith</h3>
+        <h3 className="footer-terence">terencesmith</h3>
         <ul className="footer-list">
           <li>
-            <FaGithub className="git" />
+            <Link
+              to="https://github.com/terencesmithcodes?tab=repositories"
+              smooth={true}
+              duration={500}
+            >
+              <FaGithub className="git" />
+            </Link>
           </li>
           <li>
-            <FaLinkedin className="linkedin" />
+            <Link
+              to="https://www.linkedin.com/in/terence-smith-24b42739/"
+              smooth={true}
+              duration={500}
+            >
+              <FaLinkedin className="linkedin" />
+            </Link>
           </li>
         </ul>
       </footer>
